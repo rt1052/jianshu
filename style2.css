@@ -9130,7 +9130,10 @@ nav .ic-write {
 nav .logo {
 	float: left;
 	height: 56px;
-	padding: 0
+	padding: 0;
+	margin: 5px;
+  	color: #EB6F5A;
+  	font-size: 1.8em;	
 }
 
 nav .logo img {

@@ -41,7 +41,7 @@
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="width-limit">
     <!-- 左上方 Logo -->
-    <a class="logo" href="/"><img src="<?php $this->options->themeUrl("img/nav-logo.png"); ?>" alt="Nav logo" /></a>
+    <a class="logo" href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title() ?></a>
 
     <!-- 右上角 -->
       <!-- 未登录显示登录/注册/写文章 -->
