@@ -45,12 +45,17 @@
 
     <!-- 右上角 -->
       <!-- 未登录显示登录/注册/写文章 -->
-      <a class="btn write-btn" target="_blank" href="http://valderfields.tpddns.cn:41281/admin/write-post.php">
+      <a class="btn write-btn" target="_blank" href="<?php $this->options->adminUrl('write-post.php'); ?>">
         <i class="iconfont ic-write"></i>写文章
       </a>  
 
-      <a class="btn sign-up" id="sign_up" href="http://valderfields.tpddns.cn:41281/admin/user.php">注册</a>
-      <a class="btn log-in" id="sign_in" href="http://valderfields.tpddns.cn:41281/admin">登录</a>
+      <a class="btn sign-up" id="sign_up">注册</a>
+
+      <?php if($this->user->hasLogin()):?>
+        <a class="btn log-in" id="sign_in" href="<?php $this->options->logoutUrl(); ?>">退出</a>
+      <?php else: ?>
+        <a class="btn log-in" id="sign_in" href="<?php $this->options->adminUrl('login.php'); ?>">登录</a>
+      <?php endif;?>
 
     <!-- 如果用户登录，显示下拉菜单 -->
 

@@ -19,6 +19,12 @@
                 <i class="iconfont ic-catalog"></i>
                 <?php $this->category(','); ?>
             </li>
+
+            <li>
+                <?php if($this->user->hasLogin()):?>
+                    <a href="<?php $this->options->adminUrl(); ?>write-post.php?cid=<?php echo $this->cid;?>" >编辑</a>
+                <?php endif;?>
+            </li>            
         </ul>  
 
         <div class="post-content-archive" itemprop="articleBody">
